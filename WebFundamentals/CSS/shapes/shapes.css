@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#square{
+    width: 140px;
+    height: 140px;
+    background: blue;
+    margin: 30px;
+}
+
+#circle {
+    height: 140px;
+    width: 140px;
+    border-radius: 100px;
+    background: blue;
+    margin: 30px;
+}
+#triangle {
+    height: 0;
+    width: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 140px solid blue;
+    /*background: blue;*/
+    margin: 30px;
+}
+#pacman{
+    height: 0;
+    width: 0;
+    border-right: 70px solid transparent;
+    border-left: 70px solid blue;
+    border-top: 70px solid blue;
+    border-bottom: 70px solid blue;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    margin: 30px;
+}
