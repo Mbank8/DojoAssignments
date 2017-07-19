@@ -5,10 +5,11 @@
 //return 0 if no more quarters
 
 function playSlots(numOfQuarters) {
-    var win = Math.random;
-    console.log(win);
+    var win = Math.random();
+    // console.log(win);
 
     while(win > .01 && numOfQuarters > 0){
+        var win = Math.random();
         console.log(numOfQuarters--);
         console.log(win);
     }
@@ -17,8 +18,11 @@ function playSlots(numOfQuarters) {
         console.log(numOfQuarters + (Math.floor(Math.random()*50)+50));
     }
     else{
+        console.log("You Lost Everything!");
         return 0;
+        
     }
-    }
-playSlots(50);
+}
+playSlots(50)
+
 
