@@ -8,15 +8,17 @@ function playSlots(numOfQuarters) {
     var win = Math.random;
     console.log(win);
 
-    if(numOfQuarters >=1 && win < .01){
-        var winnings = (Math.floor(Math.random()*50)+50);
-        console.log(winnings);
+    if(win > .01 && numOfQuarters > 0){
+        console.log(numOfQuarters--);
+        console.log(win);
     }
-    if(winnings > 0){
-        console.log(numOfQuarters += winnings);
+    else if(numOfQuarters > 0 && win <= .01){
+        (Math.floor(Math.random()*50)+50);
+        console.log(numOfQuarters + (Math.floor(Math.random()*50)+50));
     }
-    if(numOfQuarters === 0){
+    else{
         return 0;
     }
-}
-playSlots();
+    }
+playSlots(50);
+
