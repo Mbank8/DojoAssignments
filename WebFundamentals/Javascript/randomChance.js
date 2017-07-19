@@ -8,11 +8,11 @@ function playSlots(numOfQuarters) {
     var win = Math.random;
     console.log(win);
 
-    if(win > .01 && numOfQuarters > 0){
+    while(win > .01 && numOfQuarters > 0){
         console.log(numOfQuarters--);
         console.log(win);
     }
-    else if(numOfQuarters > 0 && win <= .01){
+    if(numOfQuarters > 0 && win <= .01){
         (Math.floor(Math.random()*50)+50);
         console.log(numOfQuarters + (Math.floor(Math.random()*50)+50));
     }
