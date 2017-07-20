@@ -37,8 +37,16 @@ var users = {
   ]
  }
 
-var num = 1; 
-for (var student_name in "Students"){
-    console.log(num + " - " + "Students"[student_name].first_name, "Students"[student_name].last_name + " - " + student_name.length);
+var num = 1;
+ console.log("Students"); 
+for (var student_name in users.Students){
+    console.log(num + " - " + users.Students[student_name].first_name, users.Students[student_name].last_name + " - " + (users.Students[student_name].first_name + users.Students[student_name].last_name).length);
     num++;
+}
+
+var number = 1;
+console.log("Instructors");
+for(var instructors_name in users.Instructors){
+    console.log(number + " - " + users.Instructors[instructors_name].first_name, users.Instructors[instructors_name].last_name + " - " + (users.Instructors[instructors_name].first_name +  users.Instructors[instructors_name].last_name).length);
+    number++;
 }
