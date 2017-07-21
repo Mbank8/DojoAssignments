@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Disappearing Rick</title>
+        <link rel="stylesheet" type="text/css" href="Disappearing_rigk.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script type="text/javascript">
+         $(document).ready(function(){
+
+             $('img').click(function(){
+                 $(this).hide("img");
+             });
+             $("button").click(function(){
+                 $("img").show();
+             })
+         });
+         </script>
+    </head>
+    <body>
+        <h1>Disappearing Rick jQuery Project</h1>
+        <div>
+            <img src="./rick_mugshot.jpg">
+            <img src="./rick_mugshot.jpg">
+            <img src="./rick_mugshot.jpg">
+            <img src="./rick_mugshot.jpg">
+            <img src="./rick_mugshot.jpg">
+            <img src="./rick_mugshot.jpg">
+            <img src="./rick_mugshot.jpg">
+            <img src="./rick_mugshot.jpg">
+        </div>
+        <button>Click Me To Bring Rick Back</button>
+    </body>
+</html>

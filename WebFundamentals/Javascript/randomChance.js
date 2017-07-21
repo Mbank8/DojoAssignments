@@ -16,6 +16,7 @@ function playSlots(numOfQuarters) {
     if(numOfQuarters > 0 && win <= .01){
         (Math.floor(Math.random()*50)+50);
         console.log(numOfQuarters + (Math.floor(Math.random()*50)+50));
+        console.log("You Are Super Rich!!!")
     }
     else{
         console.log("You Lost Everything!");
@@ -23,6 +24,6 @@ function playSlots(numOfQuarters) {
         
     }
 }
-playSlots(50)
+playSlots(30)
 
 

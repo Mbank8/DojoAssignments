@@ -6,9 +6,9 @@
     var p = .01;
 
     for(var d = 1; d <31; d++) {
-        console.log(d);
         if( d < 31 ){
             p *= 2;
     }
-    console.log(d + p);
+    console.log(d);
+    console.log(p);
     }
