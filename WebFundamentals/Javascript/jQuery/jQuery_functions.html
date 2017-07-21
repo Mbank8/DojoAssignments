@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Functions Page</title>
+        <link rel="stylesheet" type="text/css" href="jQuery_functions.css">
+         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script type="text/javascript">
+            $(document).ready(function(){
+                
+                $('#Click button').click(function(){
+                    alert("You just clicked a button");
+                });
+
+                $("#Hide button").click(function(){
+                    $("#Hide h1").hide("slow", function(){
+                        alert("You hid the header");
+                    });
+                });
+                $("#Show button").click(function(){
+                    $("#Show h1").show("slow");
+                });
+                $("#Toggle button").click(function(){
+                    $("#Toggle p").toggle();
+                });
+                $("#slideDown button").click(function(){
+                    $("#slideDown h3").slideDown("slow");
+                });
+                $("#slideUp button").click(function(){
+                    $("#slideUp h3").slideUp();
+                });
+                $("#slideToggle button").click(function(){
+                    $("#slideToggle h3").slideToggle("slow");
+                });
+                $("#fadeIn button").click(function(){
+                    $("#fadeIn h3").fadeIn("slow");
+                });
+                $("#fadeOut button").click(function(){
+                    $("#fadeOut h1").fadeOut("slow");
+                })
+                $("#addClass button").click(function(){
+                    $("#addClass h1").addClass("cool_class");
+                })
+                $("#before button").click(function(){
+                    $("#before p").before($("<b>Sup?</b>"));
+                })
+                $("#after button").click(function(){
+                    $("#after p").after($("<h3>Oh shoooooot you just clicked my button</h3>"));
+                })
+                $("#append button").click(function(){
+                    $("#append p").append("<strong> ...How did that click feel?</stong");
+                })
+                $("#html button").click(function(){
+                    $("#html h1").html("<h1>WHOAAAAA</h1>");
+                })
+                $("#attr button").click(function(){
+                    $("#attr p").attr("class='cool_class'");
+                })
+                $("#val button").click(function(){
+                    var text = $( this ).text();
+                    $("#val input").val( text );
+                })
+                $("#text button").click(function(){
+                    $("#text p").text("WOW look at you go!");
+                })
+            });
+
+         </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="Click" class="box">
+                <h1>Click</h1>
+                <button>Click</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+        </div>
+            <div id="Hide" class="box">
+                <h1>Hide</h1>
+                <button>Hide</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+        </div>
+            <div id="Show" class="box">
+                <h1 style="display:none">Show</h1>
+                <button>Show</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+            <div id="Toggle" class="box">
+                <h1>Toggle</h1>
+                <button>Toggle</button>
+                <p>Click the button to trigger alert</p>
+                <p style="display: none">You have unlocked your inner beast</p>
+            </div>
+            <div id="slideDown" class="box">
+                <h1>SlideDown</h1>
+                <button>SlideDown</button>
+                <p>Click the button to trigger alert</p>
+                <h3 style="display: none">Slide on in</h3>
+            </div>
+            <div id="slideUp" class="box">
+                <h1>SlideUp</h1>
+                <button>SlideUp</button>
+                <h3>Whoa, I don't think I am supposed to be here...</h3>
+                <p>Click the button to trigger alert</p>
+            </div>
+            <div id="slideToggle" class="box">
+                <h1>SlideToggle</h1>
+                <button>SlideToggle</button>
+                <p>Click the button to trigger alert</p>
+                <h3>Now you see me...</h3>
+            </div>
+            <div id="fadeIn" class="box">
+                <h1>FadeIn</h1>
+                <button>FadeIn</button>
+                <p>Click the button to trigger alert</p>
+            <h3>DO NOT MOVE! POLICE HAVE BEEN CALLED</h3>
+            </div>
+            <div id="fadeOut" class="box">
+                <h1>FadeOut</h1>
+                <button>FadeOut</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+            <div id="addClass" class="box">
+                <h1>AddClass</h1>
+                <button>AddClass</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+            <div id="before" class="box">
+                <h1>Before</h1>
+                <button>Before</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+            <div id="after" class="box">
+                <h1>After</h1>
+                <button>After</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+            <div id="append" class="box">
+                <h1>Append</h1>
+                <button>Append</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+            <div id="html" class="box">
+                <h1>HTML</h1>
+                <button>HTML</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+            <div id="attr" class="box">
+                <h1>Attr</h1>
+                <button>Attr</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+            <div id="val" class="box">
+                <h1>Val</h1>
+                <button>Val</button>
+                <p>Click the button to trigger alert</p>
+                <input type="text" value="click the button">
+            </div>
+            <div id="text" class="box">
+                <h1>Text</h1>
+                <button>Text</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+            <div id="data" class="box">
+                <h1>Data</h1>
+                <button>Data</button>
+                <p>Click the button to trigger alert</p>
+            </div>
+        </div>
+        
+    </body>
+</html>
