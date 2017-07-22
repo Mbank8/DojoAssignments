@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Ninja Cat</title>
+        <link rel="stylesheet" type="text.css" href="ninja_cat.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            $("img").click(function(){
+                console.log('data-alt-src-value is', $(this).attr('data-alt-src'));
+            })
+        })
+
+        </script>
+    </head>
+    <body>
+            <ul style="list-style-type: none">
+                <li><img src='./img/ninja0.png' data-alt-src='./img/cat0.png' /></li>
+                <li><img src='./img/ninja1.png' data-alt-src='./img/cat1.png' /></li>
+                <li><img src='./img/ninja2.png' data-alt-src='./img/cat2.png' /></li>
+                <li><img src='./img/ninja3.png' data-alt-src='./img/cat3.png' /></li>
+                <li><img src='./img/ninja4.png' data-alt-src='./img/cat4.png' /></li>
+            </ul>
+    </body>
+</html>
