@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Users Propject</title>
+        <link rel="stylesheet" type="text/css" href="Users.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script type="text/javascript">
+         $(document).ready(function(){
+            
+                $('form').submit(function(event){
+                    event.preventDefault();
+                    var first = $('form').find('#first[type="text"]').val();
+                    var last = $('form').find('#last[type="text"]').val();
+                    var email = $('form').find('#email[type="text"]').val();
+                    var contact = $('form').find('#contact[type="text"]').val();
+                 
+                    $('#firstName').append('<tr><td>' + first + '</td></tr>')
+                    $('#lastName').append('<tr><td>' + last + '</td></tr>')
+                    $('#emailAddress').append('<tr><td>' + email + '</td></tr>')
+                    $('#Phone').append('<tr><td>' + contact + '</td></tr>')
+                
+            });
+            $('button').click(function(){
+                $('form').submit();
+            });
+               
+         });
+         </script>
+    </head>
+    <body>
+        <div id="header">
+            <table>
+                <tr>
+                    <th id="firstName">First Name</th>
+                    <th id="lastName">Last Name</th>
+                    <th id="emailAddress">Email Address</th>
+                    <th id="Phone">Contact #</th>
+                </tr>
+            </table>
+        </div>
+        <div id="form_data">
+            <h1>Add User</h1>
+            <ul>
+                <form id="new_info">
+                    <li>First Name:<input id="first" type="text" name="First" value="First Name"></li>
+                    <li>Last Name:<input id="last" type="text" name="Last" value="Last Name"></li>
+                    <li>Email Address:<input id="email" type="text" name="Email" value="Email Address"></li>
+                    <li>Contact No.:<input id="contact" type="text" name="Phone" value="Phone #"></li>
+                </form>
+            </ul>
+            <button>Add User</button>
+        </div>
+    </body>
+</html>
