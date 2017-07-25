@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Card Project</title>
+        <link rel="stylesheet" type="text/css" href="contact_card.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script type="text/javascript">
+        $(document).ready(function(){
+
+            $('form').submit(function(){
+                var first = $('#first').val();
+                var last = $('#last').val();
+                var desc = $('#description').val();
+
+                $("#contact_card").append("<div class='person'><h1>" + first + " " + last + 
+                '</h1><p>Click for more details</p><p hidden>' + desc + '</p></div>');
+
+                return false;
+            });
+
+
+            $(document).on('click', '.person', function(){
+                $( this ).children('p').toggle('slow');
+            });
+           
+        });
+
+
+         </script>
+    </head>
+    <body>
+        <div id="user_info">
+            <form>
+                <br>First name:<input id="first" type="text" name="first"></br>
+                <br>Last name:<input id="last" type="text" name="last"></br>
+                <br>
+                <label for="description">Description:</label>
+                <br>
+                <textarea name="description" type="text" id="description" cols="50" rows="5">Enter description: </textarea>
+                <br>
+                <input type="submit" value="Add User">
+            </form>
+        </div>
+        <div id="contact_card">
+        </div>
+    </body>
+</html>

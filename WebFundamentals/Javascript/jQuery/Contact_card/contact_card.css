@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin-left: 15px;
+    
+    width: 1000px;
+}
+#user_info{
+    display: inline-block;
+}
+.person{
+    text-align: center;
+    width: 250px;
+    height: 130px;
+    border: 2px solid black;
+    margin-bottom: 5px;
+}
+form{
+    display: inline-block;
+}
+#contact_card{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 50px;
+}
