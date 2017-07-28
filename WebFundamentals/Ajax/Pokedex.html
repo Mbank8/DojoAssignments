@@ -8,22 +8,21 @@
         <script type="text/javascript">
 
             $(document).ready(function(){
-                var img = "<img src='http://pokeapi.co/media/img/" + num + ".png'>";
                 for(var num = 1; num< 152; num++){
                     $("#pics").append("<img src='http://pokeapi.co/media/img/" + num + ".png'>");
                 };
                 // };
 
                 // $(document).on('click', 'img', function(){
-                $.get("http://pokeapi.co/api/v2/pokemon/" + num, function(res){
-                    var name = "<h1>" + res.name + "</h1>";
-                    var html_str = "";
-                    html_str += "<h4>Types</h4>";
-                    html_str += "<ul>";
+                $.get("http://pokeapi.co/api/v2/pokemon/" + num + "/", function(res){
+                    var name = "<h1>" + res.name + "</h1>"; //probably have to hide h1 something //
+                    var types = "";
+                    types += "<h4>Types</h4>";
+                    types += "<ul>";
                     for(var i = 0; i < res.types.length; i++) {
-                        html_str += "<li>" + (res.types[i].name) + "</li>";
+                        types += "<li>" + (res.types[i].name) + "</li>";
                     } 
-                    html_str += "</ul>";
+                    types += "</ul>";
                     var height = "";
                     height += "<h4>Height</h4>";
                     height +="<p>" + res.height + "</p>";
@@ -31,17 +30,26 @@
                     weight += "<h4>Weight</h4>";
                     weight += "<p>" + res.weight +"</p>";
                     
-                    $("#pokedex").html(name + "<img src='http://pokeapi.co/media/img/" + num + ".png'>" + html_str + height + weight);
+                    $("#pokedex").append(name + "<img src='http://pokeapi.co/media/img/" + num + ".png'>" + types + height + weight);
                 }, "json");
-                });
-                
-                
-                // html('#pokedex').toggle('slow');
-                // $("#pics[num]").click(function(){
-                //     $( this ).html
-                // })
-    
-   
+
+                //  $("img").on ('click',function(){
+
+        
+                return false;
+                  });
+
+
+
+                // $('img').on('click',function(){
+                //     $.get(name + "<img src='http://pokeapi.co/media/img/" + num + ".png'>" + types + height + weight), function(res){
+                //     conosole.log(res);}
+                // });
+                    // $("img").on ('click',function(){
+                    //     var id = $(this).attr("num");
+                    //     alert(id);
+
+                    //     });
         </script>
     </head>
     <body>
