@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#top_pictures{
+    display: inline-block;
+    margin-left: 100px;
+}
+.picture{
+    height: 200px;
+    width: 250px;
+    margin: 30px;
+}
+#info{
+    width: 400px;
+    height: 300px;
+    border: 2px solid blue;
+    margin-left: 30%;
+}
