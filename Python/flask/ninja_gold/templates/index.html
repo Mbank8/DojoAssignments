@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ninja Gold</title>
+    </head>
+    <body>
+        <h5>Your Gold: {{session['my_gold']}}</h5>
+        
+
+        <div style="display:inline-block">
+          <div stlye="text-align:center">
+              <h3 style="font-weight: bold" >Farm</h3>
+              <p>(earns 10-20 gold)</p>
+
+              <form action="/process_money" method ="POST">
+                <input type="hidden" name="building" value="Farm">
+                <input type="submit" value="Find Gold!">
+              </form>
+          </div>
+             <div stlye="text-align:center">
+              <h3 style="font-weight: bold" >Cave</h3>
+              <p>(earns 5-10 gold)</p>
+
+              <form action="/process_money" method="POST">
+                <input type="hidden" name="building" value="Cave">
+                <input type="submit" value="Find Gold!">
+              </form>
+          </div>
+             <div stlye="text-align:center">
+              <h3 style="font-weight: bold" >House</h3>
+              <p>(earns 2-5 gold)</p>
+
+              <form action="/process_money" method="POST">
+                <input type="hidden" name="building" value="House">
+                <input type="submit" value="Find Gold!">
+              </form>  
+
+          </div>
+             <div stlye="text-align:center">
+              <h3 style="font-weight: bold" >Casino</h3>
+              <p>(earns/takes 0-50 gold)</p>
+              <form action="/process_money" method="POST">
+                <input type="hidden" name="building" value="Casino">
+                <input type="submit" value="Find Gold!">
+              </form>
+          </div>
+        </div>  
+        <h5>Activites:</h5>
+        {% for activity in session['activities'] %}
+        <p>{{ activity }}</p>
+        {% endfor %}
+        
+
+    </body>
+</html>
