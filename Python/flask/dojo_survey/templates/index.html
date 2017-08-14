@@ -7,22 +7,30 @@
     </head>
     <body>
         <div id="content">
+            <h1>Hi, Please fill out the survey below</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p>{{meassage}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
             <form action='/result' method='post'>
-                Your Name: <input type='text' name='name'>
+                Your Name: <input type='text' name='name'></br>
                 Dojo Location: <select name="location">
                                         <option value="Seattle">Seattle</option>
                                         <option value="DC">DC</option>
                                         <option value="San Fran">San Fransico</option>
                                         <option value="Boston">Boston</option>
-                                    </select>
+                                    </select></br>
                 Favorite Language: <select name="language">
                                         <option value="Javascript">Javascript</option>
                                         <option value="Python">Python</option>
                                         <option value="Node.JS">Node.js</option>
                                         <option value="Ruby">Ruby</option>
-                                    </select>
-                Comment: <textarea name='comment' rows="4" cols="50"></textarea>
-                <button><input type="submit" value= "Submit Info"></button>
+                                    </select></br>
+                Comment: <textarea name='comment' rows="4" cols="50"></textarea></br>
+                <input type="submit" value= "Submit Info">
             </form>
         </div>
     </body>

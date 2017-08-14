@@ -5,10 +5,16 @@
         <title>Dojo Survey Index</title>
     </head>
     <body>
+
         <h3>Submitted Info</h3>
-        <h4>Name: {{name}}</h4>
-        <h4>Dojo Location: {{location}}</h4>
-        <h4>Favorite Language: {{language}}</h4>
-        <h4>Comment: {{comment}}</h4>
+
+        <h4>Name: {{user.name}}</h4>
+        <h4>Dojo Location: {{user.location}}</h4>
+        <h4>Favorite Language: {{user.language}}</h4>
+        <h4>Comment: {{user.comment}}</h4>
+
+        <form action='/' method='get'>
+            <input type="submit" value="Go Back">
+        </form>
     </body>
 </html>
