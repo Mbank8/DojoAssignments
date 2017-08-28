@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Success Page</title>
+    </head>
+    <body>
+        <!-- insert flash that EMAIL was valid -->
+        {% with messages = get_flashed_messages(category_filter=["wrong"]) %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p> {{ message }} </p>
+                {% endfor %}
+                <form action='/reset' method='post'>
+                <input type='submit' name='reset' value='Try Again'>
+                </form>
+            {% endif %}
+        {% endwith%}
+
+
+        {% with messages = get_flashed_messages(category_filter=["success"]) %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{ message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% for user in users %}
+            <p>Email: {{ user['email']}} {{user['created_at']}}</p>
+        {% endfor %}
+
+    </body>
+</html>
