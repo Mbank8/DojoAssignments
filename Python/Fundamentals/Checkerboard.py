@@ -7,5 +7,5 @@ while i < 11:
         print " * * * *"
         i += 1
 
-    
+    i = 1
     

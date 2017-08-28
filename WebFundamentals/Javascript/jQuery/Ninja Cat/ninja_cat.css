@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.image{
+    display: block;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    list-style-type: none;
+}
