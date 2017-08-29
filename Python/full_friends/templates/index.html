@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Full Friends</title>
+    </head>
+    <body>
+        <h1>Full Friends</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in all_users %}
+                <tr>
+                    <td>{{user['first_name']}}</td>
+                    <td>{{user['last_name']}}</td>
+                    <td>{{user['email']}}</td>
+                    <td>
+                        <form action="/friends/{{user['id']}}/edit", method="Post">
+                        <input type="submit" name="edit" value="Edit">
+                        </form>
+                        <form action="/friends/{{user['id']}}/delete", method="Post">
+                        <input type="submit" name="delete" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+
+                {% endfor %}
+                    
+            </tbody>
+          <!-- need to insert something that has user data and the buttons -->
+        </table>
+
+
+        <form action="/friends" method="POST">
+        <p>First Name:<input type="text" name="first_name"></p>
+        <p>Last Name:<input type="text" name="last_name"></p>
+        <p>Email:<input type="text" name="email"> <input type="submit" name="add_friend" value="Add Friend"></p>
+        </form>
+    </body>
+</html>

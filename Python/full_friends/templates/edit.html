@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Edit Page</title>
+    </head>
+    <body>
+        <h2> Current information for: {{edit_user.first_name}}</h2>
+            <p>First Name: {{ edit_user.first_name }}</p>
+            <p>Last Name: {{ edit_user.last_name }}</p>
+            <p>Email: {{ edit_user.email }}</p>
+            <h2>Update date {{edit_user.first_name}}'s information:</h2>
+            <form action="/friends/{{edit_user.id}}", method='POST'>
+            <label for="first_name">First Name: <input type="text" name="first_name" id="first_name"></label>
+                <label for="last_name">Last Name: <input type="text" name="last_name" id="last_name"></label>
+                <label for="email">E-mail: <input type="text" name="email" id="email"></label>
+                <input type="submit" value="Update">
+            </form>
+    </body>
+</html>
